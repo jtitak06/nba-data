@@ -1,5 +1,5 @@
 const express = require("express");
-const cors = require("cors");
+//const cors = require("cors");
 const app = express();
 const pointData = require("./points.json");
 const reboundData = require("./rebounds.json");
@@ -8,7 +8,7 @@ const assistData = require("./assists.json");
 
 const port = process.env.PORT || 3000;
 
-app.use(cors());
+//app.use(cors());
 
 app.get("/", (req, res) => {
     res.send("NBA Stat Leaders");
