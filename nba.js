@@ -4,6 +4,8 @@ const pointData = require("./points.json");
 const reboundData = require("./rebounds.json");
 const assistData = require("./assists.json");
 
+const port = process.env.PORT || 3000;
+
 app.get("/", (req, res) => {
     res.send("NBA Stat Leaders");
 });
@@ -20,6 +22,6 @@ app.get("/assists", (req, res) => {
     res.send(assistData);
 });
 
-app.listen(3000, () => {
+app.listen(port, () => {
     console.log(`Port is listening on port 3000`);
 });
